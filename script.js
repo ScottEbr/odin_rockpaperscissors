@@ -52,8 +52,6 @@ function game(){
             console.log("Game tie.")
         } else {
             playerScore = playerScore.map((val, i) => val + playRound(humanChoice, computerChoice)[i])
-
-            //console.log(playerScore)
         }
 
         console.log("RUNNING TALLY: HUMAN: " + playerScore[0] + " | COMPUTER: " +playerScore[1])
@@ -69,7 +67,6 @@ function game(){
         gamesPlayed++
 
     }
-        
 
 }
 
