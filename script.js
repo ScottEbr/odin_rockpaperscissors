@@ -11,12 +11,6 @@ function getComputerChoice() {
     return compHand
 }
 
-// function getHumanChoice() {
-//     let humanHand = prompt("Choose your hand!").toUpperCase()
-
-//     return humanHand
-// }
-
 function playRound(humanHand, compHand){
     let gameMessage = ""
     let playerScore = 0
@@ -137,9 +131,6 @@ playAgainBtn.addEventListener("click", () => {
     hideModal();
     resetGame();
 });
-
-
-
 
 
 // UI score update
