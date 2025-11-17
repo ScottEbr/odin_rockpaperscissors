@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
 </head>
@@ -12,15 +12,15 @@
         <h1>ROCK PAPER SCISSORS</h1>
     </header>
     <div class="hero">
-        <p>Choose your hand</p>
-        <p>First to 5 wins!</p>
+        <p>Play this classic game. Try to beat your computer! Choose your hand below.</p>
+        <b>First to 5 wins!</b>
     </div>
     <div class="game">
         <div class="player">
             <h2>PLAYER</h2>
-            <button>ROCK!</button>
-            <button>PAPER!</button>
-            <button>SCISSORS!</button>
+            <button class="choice-btn" id="rockBtn">ROCK!</button>
+            <button class="choice-btn" id="paperBtn">PAPER!</button>
+            <button class="choice-btn" id="scissorsBtn">SCISSORS!</button>
         </div>
         <div class="computer">
             <h2>COMPUTER</h2>
@@ -31,7 +31,38 @@
         
     </div>
     <div class="results">
-
+        <h3>RESULTS</h3>
+        <div>
+            <p id="roundCount">Round: 0</p>
+        </div>
+        <div>
+            <p id="resultsComment">Waiting for first game...</p>
+        </div>
+        <div class="results-wrapper">
+            <div class="playerResults">
+                <p id="playerScoreText">PLAYER: 0</p>
+            </div>
+            <div class="computerResults">
+                <p id="computerScoreText">COMPUTER: 0</p>
+            </div>
+        </div>
     </div>
+    <div class="modal">
+        <div class="modalContent">
+            <div>
+                <h1>###</h1>
+            </div>        
+            <div>
+                <button class="playBtn">Play Again?</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <footer class="footer">
+      <p>ScottEbr</p>
+      <a href="https://github.com/ScottEbr" target="_blank">
+        <img class="github-logo" src="github-mark.svg" />
+      </a>
+    </footer>
 </body>
 </html>

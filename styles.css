@@ -31,6 +31,7 @@ header {
 
 }
 
+/* INTRODUCTION */
 .hero {
     display: flex;
     flex-direction: column;
@@ -39,10 +40,17 @@ header {
     margin: 14px;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    text-align: center;
+    width: 30%;
     border-radius: 8px;
+    padding: 14px;
 }
 
+.hero b {
+    margin: 21px 0px 21px 0px;
+}
+
+/* GAME CONTAINER */
 .game {
     display: flex;
     background-color: var(--bg-200);
@@ -102,9 +110,140 @@ header {
 }
 
 .spacer {
-    flex: 1; /* expands equally above and below */
+    flex: 1; 
 }
 
+.resultText {
+    color: var(--text-100);
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* RESULT CONTAINER */
+
+.results {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-200);
+    margin: 14px;
+    padding: 14px;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.results h3 {
+    text-decoration: underline;
+    color: var(--primary-100);
+}
+
+.results p {
+    color: var(--text-100);
+}
+
+.results-wrapper {
+    display: flex;
+    gap: 100px;
+}
+
+/* MODAL POP UP */
+
+.modal {
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+
+    opacity: 0;
+    pointer-events: none; 
+    transition: opacity 0.3s ease 0s;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-100);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 600px;
+
+    transform: translateY(-50px);
+    transition: transform 0.3s ease 0.1s;
+
+}
+
+.modal.active .modalContent {
+    transform: translateY(0);
+}
+
+.modalContent h1 {
+    color: var(--primary-100);
+}
+
+.modalContent button {
+    background-color: var(--bg-300);
+    border: none;
+    color: var(--text-100);
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.modalContent button:hover {
+    background-color: var(--accent-100);
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  color: var(--text-100);
+  font-size: 20px;
+  background-color: var(--bg-200);
+}
+
+.github-logo {
+  display: block;
+  max-width: 28px;
+  max-height: 28px;
+  color: var(--primary-light);
+  transition: transform 0.3s ease-in-out;
+}
+
+.github-logo:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* LOADING BUTTONS */
 .loader {
     width: 20px;
     height: 20px;
